@@ -42,14 +42,14 @@ header ul {
   padding: 20px 35px;
 }
 
-header a{
+header li{
   text-decoration: none;
   font-size: 40px;
   color: var(--firstColor);
   padding: 0 25px;
 }
 
-header a:hover {
+.navActive {
   color: var(--thirdColor);
 }
 /*END Site Navigation*/
@@ -58,14 +58,6 @@ header a:hover {
 .sub-title {
   background-image: linear-gradient(to right, #dcd6f7, #947be4, #564787, #362d55);
   padding: 30px;
-}
-.sub-title h2 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: end;
-  font-weight: normal;
-  color: var(--firstColor);
-  padding-right: 35px;
 }
 /*END Sub-Title*/
 

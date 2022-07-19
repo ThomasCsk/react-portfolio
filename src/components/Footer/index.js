@@ -2,11 +2,11 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <section id="contact-info" class="general-flex contact">
-    <div class="section-title contact-title"> 
+    <section id="contact-info" className="general-flex contact">
+    <div className="section-title contact-title"> 
         <h3>Contact Info</h3>
     </div> 
-    <div class="contact-links"> 
+    <div className="contact-links"> 
         <div> 
             <p>P: (540) 415-2024</p>
         </div> 

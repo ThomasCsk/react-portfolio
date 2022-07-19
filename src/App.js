@@ -15,13 +15,13 @@ function App() {
   const [contactSelected, setContactSelected] = useState(false);
   return (
     <div>
-      <Header>
+      <Header 
         categories={categories}
         setCurrentCategory={setCurrentCategory}
         currentCategory={currentCategory}
         contactSelected={contactSelected}
         setContactSelected={setContactSelected}
-      </Header>
+      ></Header>
       <main>
         {!contactSelected ? (
           <About></About>
