@@ -1,13 +1,213 @@
-body {
+/*START General CSS Stylings*/
+*{
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--firstColor);
+  background-color: var(--fourthColor);
+}
+:root {
+  --firstColor: #48f4b3;
+  --secondColor: #564787;
+  --thirdColor: #dcd6f7;
+  --fourthColor: #717568;
+}
+.section-title {
+  font-size: 32px;
+  color: var(--thirdColor);
+  border-right: 3px solid var(--secondColor);
+}
+.general-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+/*END General CSS Stylings*/
+
+/*START Site Navigation*/
+header div h1 {
+  font-size: 48px;
+  padding: 12px 35px;
+}
+header {
+  background-color: rgb(43, 42, 42);
+}
+header ul {
+  align-items: center;
+  list-style: none;
+  text-align: right;
+  padding: 20px 35px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+header a{
+  text-decoration: none;
+  font-size: 40px;
+  color: var(--firstColor);
+  padding: 0 25px;
 }
+
+header a:hover {
+  color: var(--thirdColor);
+}
+/*END Site Navigation*/
+
+/*START Sub-Title*/
+.sub-title {
+  background-image: linear-gradient(to right, #dcd6f7, #947be4, #564787, #362d55);
+  padding: 30px;
+}
+.sub-title h2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  font-weight: normal;
+  color: var(--firstColor);
+  padding-right: 35px;
+}
+/*END Sub-Title*/
+
+/*START About*/
+.about {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.about-title h3 {
+  border-top: 3px solid var(--secondColor);
+  font-size: 32px;
+  color: var(--thirdColor);
+}
+.about-title{
+  flex-direction: column;
+  border: 3px solid var(--secondColor);
+  border-left: none;
+  text-align: center;
+}
+.about-title img {
+  max-width: 400px;
+  margin-bottom: -4px;
+  border: 6px solid #4c0999;
+}
+.text{
+  font-size: 32px;
+  margin: 0px 50px;
+}
+/*END About*/
+
+/*START Projects*/
+.project-links {
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 0px auto;
+}
+.projects-title {
+  padding: 0px 130px;
+}
+.run-buddy, .horiseon, .robot-gladiators {
+  flex-direction: column;
+  border: 3px solid var(--secondColor);
+  text-align: center;
+  margin: 10px 5px;
+}
+.project-header{
+  border-bottom: 3px solid var(--secondColor);
+}
+.project-links img {
+  max-width: 387px;
+  align-content: center;
+  margin-bottom: -4px;
+  opacity: .3;
+}
+.project-links img:hover {
+  opacity: 1;
+}
+.run-buddy img{
+  max-width: 800px;
+}
+/*END Projects*/
+
+/*START Contact Info*/
+.contact-title {
+  padding: 0px 91px;
+  border-top: 3px solid var(--secondColor);
+}
+.contact-links{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+.contact-links div {
+  padding: 10px 50px;
+}
+.contact-links a {
+  text-decoration: none;
+  color: var(--firstColor);
+}
+.contact-links a:hover {
+  color: var(--thirdColor);
+}
+/*END Contact Info*/
+
+/*START Media Queries*/
+@media screen and (max-width: 1250px) {
+  .general-flex{
+      flex-direction: column;
+  }
+  .section-title {
+      border-right: none;
+      border-bottom: 3px solid var(--secondColor);
+      margin: 0 auto;
+      width: fit-content;
+      text-align: center;
+  }
+  header h1 {
+      text-align: center;
+  }
+  .sub-title h2{
+      justify-content: center;
+      padding: 0;
+  }
+  .about-title{
+      flex-direction: column;
+      border: 3px solid var(--secondColor);
+      text-align: center;
+  }
+  .contact-title {
+      border-top: none;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .run-buddy img{
+      max-width: 400px;
+  }
+  .contact-links{
+      flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 420px) { 
+  *{
+      margin: 0 auto;
+      padding:0;
+      font-size: 20px;
+  }    
+  .run-buddy img, .horiseon img, .robot-gladiators img, .about-title img{
+      max-width: 200px;
+  }
+  .section-title {
+      border-bottom: none;
+      font-weight: bolder;
+  }    
+  header h1{
+      font-size: 25px;
+      font-weight: bolder;
+  }
+  header a {
+      font-size: 20px;
+  }
+}
+/*END Media Queries*/
