@@ -10,23 +10,22 @@ function App() {
   // const [contactSelected, setContactSelected] = useState(false);
   return (
     <div>
-      
-      <main>
-        <Nav>
+      <Nav>
         {/* setCurrentCategory={setCurrentCategory}
         currentCategory={currentCategory}
         contactSelected={contactSelected}
         setContactSelected={setContactSelected} */}
       </Nav>
+      <main>
         {/* {!contactSelected ? ( */}
           <Projects></Projects>
           <About></About>
         {/*  ) : (*/}
           <Contact></Contact>
         {/* )}*/}
-        <Footer></Footer>
+        
       </main>
-      
+      <Footer></Footer>
     </div>
   );
 }
