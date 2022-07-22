@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
 import About from './components/About';
 import Contact from './components/Contact';
-// import Projects from './components/Projects';
+import Projects from './components/Projects';
 import Header from './components/Header';
 import Footer from './components/Footer'
+
 
 function App() {
   const [categories] = useState([
@@ -24,7 +25,10 @@ function App() {
       ></Header>
       <main>
         {!contactSelected ? (
+          <>
+          <Projects></Projects>
           <About></About>
+          </>
         ) : (
           <Contact></Contact>
         )}
