@@ -8,29 +8,26 @@ const Nav = (props) => {
     contactSelected,
     setContactSelected
   } = props;
-
-return (
-  <nav>
-    <ul className='general-flex'>
-      {categories.map((category) => (
-        <li
-          className={`mx-1 ${
-            currentCategory.name === category.name && !contactSelected && `navActive`
-            }`}
-          key={category.name}
-        >
-          <span onClick={() => {
-              setCurrentCategory(category);
-              setContactSelected(false);
-            }}
-          >
-            {category.name}
-          </span>
+  return (
+    <nav>
+      <ul className='general-flex'>
+        <li className={`${!contactSelected && 'navActive'}`}>
+          <a data-testid="about" href="#about" onClick={() => setContactSelected(false)}>
+            About-Me
+          </a>
         </li>
-      ))}
-    </ul>
-  </nav>
-);
+        <li className={`${contactSelected && 'navActive'}`}>
+          <span onClick={() => setContactSelected(true)}>Contact-Me</span>
+        </li>
+        <li className={`${!contactSelected && 'navActive'}`}>
+          <span onClick={() => {
+            setCurrentCategory(categories[1]);
+            setContactSelected(false);
+          }}>My-Projects</span>
+        </li>
+      </ul>
+    </nav>
+  );
 }
 
 export default Nav;

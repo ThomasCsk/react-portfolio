@@ -9,7 +9,7 @@ const About = () => {
           <img src={mugshot} style={{ maxWidth: "25%"}} alt="A selfie of myself"/>
         </div>
         <div>
-          <h3>About Me, Thomas Ciszek:</h3>
+          <h3 id='about'>About Me, Thomas Ciszek:</h3>
         </div>
       </div>
       <div className='text'>
