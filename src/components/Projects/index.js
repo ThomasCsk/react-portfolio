@@ -44,17 +44,16 @@ const Project = () => {
   }
   return (
     <section className='project-links'>
+      <h2 className='subtitle'>My-Projects!</h2>
       {isModalOpen && (
         <Modal currentPhoto={currentPhoto} onClose={toggleModal} />
       )}
       {projects.map((image, i) => (
-        <div>
-          <p>{projects[i].name}</p>
+        <div className='single-project'>
+          <p className='subtitle'>{projects[i].name}</p>
           <img
             src={require(`../../assets/ProjectScreenshots/${i}.PNG`)}
             alt={image.name}
-            style={{maxWidth: "60%", justifyContent: 'space-around'}}
-            className="img-thumbnail mx-1 general-flex"
             onClick={() => toggleModal(image, i)}
             key={image.name + i}
           />

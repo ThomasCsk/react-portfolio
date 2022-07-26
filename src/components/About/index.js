@@ -3,10 +3,10 @@ import mugshot from '../../assets/Mugshot/mugshot.jpg'
 
 const About = () => {
   return (
-    <section className='general-flex'>
+    <section className='about-section'>
       <div className='general-flex about-title'>
         <div>
-          <img src={mugshot} style={{ maxWidth: "25%"}} alt="A selfie of myself"/>
+          <img src={mugshot} style={{ maxWidth: "100%"}} alt="A selfie of myself"/>
         </div>
         <div>
           <h3 id='about'>About Me, Thomas Ciszek:</h3>

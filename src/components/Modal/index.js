@@ -4,17 +4,19 @@ const Modal = ({ onClose, currentPhoto }) => {
   const {name, description, website, github, index} = currentPhoto;
   console.log(name, description, website, github, index);
   return(
-    <div>
-      <div>
+    <div className='modalBackground'>
+      <div className='modalCard'>
         <div>
-          <h3>{name}</h3>
+          <h3 className='modalTitle'>{name}</h3>
+        </div>
+        <div className='modalContent'>
           <img src={require(`../../assets/ProjectScreenshots/${index}.PNG`)} alt="current project" />
-          <p>{description}</p>
-          <div>
-            <a href={website} target='_blank' rel="noreferrer">Website</a>
-            <a href={github} target='_blank' rel="noreferrer">GitHub</a>
-          </div>
-          <button onClick={onClose} type="button">Close this modal</button>
+          <p className='modalTitle'>{description}</p>
+        </div>    
+        <div className='modalButtons'>
+          <a href={website} className='button is-link' target='_blank' rel="noreferrer">Website</a>
+          <a href={github} className='button is-link' target='_blank' rel="noreferrer">Git Hub</a>
+          <button onClick={onClose} className='button'>Close</button>
         </div>
       </div>
     </div>

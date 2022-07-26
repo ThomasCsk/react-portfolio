@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
 const Nav = (props) => {
     const {
@@ -8,18 +8,28 @@ const Nav = (props) => {
     contactSelected,
     setContactSelected
   } = props;
+
+  useEffect(() => {
+    document.title = currentCategory.name;
+  }, [currentCategory]);
   return (
     <nav>
-      <ul className='general-flex'>
-        <li className={`${!contactSelected && 'navActive'}`}>
-          <a data-testid="about" href="#about" onClick={() => setContactSelected(false)}>
+      <ul className={`nav-buttons`}>
+        <li className={`subtitle`}>
+          <a data-testid="about" href="#about" onClick={() => {
+            setCurrentCategory(categories[0]);
+            setContactSelected(false)
+            }}className={`${currentCategory.name==="About-Me" && 'navActive'}`}>
             About-Me
           </a>
         </li>
-        <li className={`${contactSelected && 'navActive'}`}>
-          <span onClick={() => setContactSelected(true)}>Contact-Me</span>
+        <li className={`${currentCategory.name==="Contact-Me" && 'navActive'} subtitle`}>
+          <span onClick={() => {
+            setCurrentCategory(categories[2])
+            setContactSelected(true)
+          }}>Contact-Me</span>
         </li>
-        <li className={`${!contactSelected && 'navActive'}`}>
+        <li className={`${currentCategory.name==="My-Projects" && 'navActive'} subtitle`}>
           <span onClick={() => {
             setCurrentCategory(categories[1]);
             setContactSelected(false);

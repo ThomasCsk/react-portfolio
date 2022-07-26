@@ -38,20 +38,20 @@ const Contact = () => {
 
 
   return(
-    <section>
+    <section className='contact'>
       <h1>Contact me</h1>
-      <form id="contact-form" onSubmit={handleSubmit}>
-        <div>
+      <form id="contact-form" className='contact-form' onSubmit={handleSubmit}>
+        <div className='form-input'>
           <label htmlFor="name">Name:</label>
           <input type="text" name="name" defaultValue={formState.name} onChange={handleChange} />
         </div>
-        <div>
+        <div className='form-input'>
           <label htmlFor="email">Email address:</label>
           <input type="email" name="email" defaultValue={formState.email} onChange={handleChange} />
         </div>
-        <div>
+        <div className='form-input'>
           <label htmlFor="message">Message:</label>
-          <textarea name="message" rows="5"  defaultValue={formState.message} onChange={handleChange} />
+          <textarea name="message" rows="3"  defaultValue={formState.message} onChange={handleChange} />
         </div>
         {errorMessage && (
           <div>

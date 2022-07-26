@@ -13,7 +13,7 @@ const Header = (props) => {
     <header className="general-flex"> 
       <div> 
         <a href='/'>
-          <h1>Thomas Ciszek's Portfolio</h1>
+          <h1 className='title p-4'>Thomas Ciszek's Portfolio</h1>
         </a>
       </div>
       <Nav         
