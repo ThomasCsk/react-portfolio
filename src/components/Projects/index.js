@@ -32,7 +32,13 @@ const Project = () => {
       description: 'A Website made with Node.js, Express.js, and MySQL. This website allows users to make a playlist of songs by looking up one song, and getting recommendations based on it.',
       website: 'https://music-suggestion-app.herokuapp.com/',
       github: 'https://github.com/chlucas324/music-suggestion'
-    }
+    },
+    {
+      name: 'First Portfolio',
+      description: 'A Website made with HTML and CSS. This is the first portfolio that I built for myself, so not only is it sentimental to me, it also shows exactly how far I have come.',
+      website: 'https://thomascsk.github.io/portfolio/',
+      github: 'https://github.com/ThomasCsk/portfolio'
+    },
   ]
 
   const [currentPhoto, setCurrentPhoto] = useState();
