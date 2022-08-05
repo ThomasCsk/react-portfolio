@@ -39,6 +39,12 @@ const Project = () => {
       website: 'https://thomascsk.github.io/portfolio/',
       github: 'https://github.com/ThomasCsk/portfolio'
     },
+    {
+      name: 'Scholar Foundation',
+      description: 'A Website made with MERN, Apollo, and Graphql. This is the final group project from my coding bootcamp. Due to the deadline that was given and the issues our group ran into, the website leaves a lot to be desired, but soon another website will take its spot on my portfolio.',
+      website: 'https://vast-brushlands-01770.herokuapp.com/',
+      github: 'https://github.com/ThomasCsk/scholar-foundation'
+    },
   ]
 
   const [currentPhoto, setCurrentPhoto] = useState();
